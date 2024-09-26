@@ -1,5 +1,5 @@
 <h1 align="center">
-  Web Developer Essentials - API
+  Web Developer Essentials - APP
 </h1>
 
 ## 💻 Projeto
