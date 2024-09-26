@@ -2,6 +2,10 @@
   Web Developer Essentials - APP
 </h1>
 
+<img style="width: 100%;" src="https://github.com/user-attachments/assets/f4651798-c285-4a93-b36c-a67b4a0b9b33" alt="WDE Layout"/>
+  
+
+
 ## 💻 Projeto
 
 O projeto desenvolvido consiste em uma aplicação **front-end** moderna e interativa, construída para consumir uma API REST, que substituiu o antigo sistema server-side. Essa aplicação foi projetada para fornecer uma experiência fluida e dinâmica, utilizando **Vue.js** como framework de UI, juntamente com **TypeScript** para garantir tipagem estática e maior confiabilidade no código.
