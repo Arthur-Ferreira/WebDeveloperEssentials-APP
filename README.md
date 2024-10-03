@@ -3,8 +3,6 @@
 </h1>
 
 <img style="width: 100%;" src="https://github.com/user-attachments/assets/f4651798-c285-4a93-b36c-a67b4a0b9b33" alt="WDE Layout"/>
-  
-
 
 ## 💻 Projeto
 
