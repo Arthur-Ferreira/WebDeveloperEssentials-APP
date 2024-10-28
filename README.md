@@ -29,7 +29,7 @@ A interface foi otimizada com **Less**, um pré-processador de CSS que facilita 
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Vue.js](https://vuejs.org/)
+- [React](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Less](https://lesscss.org/)
