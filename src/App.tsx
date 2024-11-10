@@ -1,21 +1,28 @@
-<template>
-  <AppHeader/>
-  <router-view/>
-</template>
+import "./less/base.less";
 
-<script>
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AllProducts from "./components/customer/products/AllProducts";
+import React from "react";
+import AppRoot from "./components/shared/includes/AppRoot";
 
-import AppHeader from './components/shared/includes/AppHeader.vue';
-
-export default {
-  name: "App",
-  components: {
-    AppHeader
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppRoot />,
+    children: [
+      {
+        path: "products",
+        element: <AllProducts />,
+      },
+    ]
   }
+]);
+
+const App: React.FC = () => {
+  return (
+    <RouterProvider router={router} />
+  );
 }
-</script>
 
-<style lang="less">
-@import "./less/base.less";
 
-</style>
+export default App
