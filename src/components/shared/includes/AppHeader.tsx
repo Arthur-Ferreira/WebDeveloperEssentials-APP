@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
+import NavItems from "./NavItems";
+
 import "../../../less/navigation.less";
+
 
 const AppHeader: React.FC = () => {
   return (
@@ -13,7 +16,7 @@ const AppHeader: React.FC = () => {
             <li><Link to="/cart">Cart</Link></li>
             <li><Link to="/orders">Order</Link></li>
           </ul>
-          {/* <!-- <%- include('nav-items') %> --> */}
+          <NavItems />
         </nav>
         <button id="mobile-menu-btn">
           <span></span>
@@ -23,7 +26,7 @@ const AppHeader: React.FC = () => {
       </header>
       <aside id="mobile-menu">
         <nav>
-          {/* <!-- <%- include('nav-items') %> --> */}
+          <NavItems />
         </nav>
       </aside>
     </>
