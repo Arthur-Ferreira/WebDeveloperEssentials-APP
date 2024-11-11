@@ -1,13 +1,14 @@
-<template>
-  <main>
-    <h1>Not authorized!</h1>
-    <p>You are not authorized!</p>
-    <p><a class="btn" href="/">Back to safety!</a></p>
-  </main>
-</template>
+import { Link } from "react-router-dom";
 
-<script>
-export default {
-  name: "403"
+const Error403: React.FC = () => {
+  return (
+    <main>
+      <h1>Not authorized!</h1>
+      <p>You are not authorized!</p>
+      <p><Link className="btn" to="/">Back to safety!</Link></p>
+    </main>
+  );
 }
-</script>
+
+
+export default Error403

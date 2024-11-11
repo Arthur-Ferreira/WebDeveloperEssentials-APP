@@ -1,5 +1,12 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+const About: React.FC = () => {
+  return (
+    <main>
+      <div className="about">
+        <h1>This is an about page</h1>
+      </div>
+    </main>
+  );
+}
+
+
+export default About

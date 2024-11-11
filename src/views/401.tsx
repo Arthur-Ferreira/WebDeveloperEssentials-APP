@@ -1,13 +1,14 @@
-<template>
-  <main>
-    <h1>Not authenticated!</h1>
-    <p>You are not authenticated!</p>
-    <p><a class="btn" href="/">Back to safety!</a></p>
-  </main>
-</template>
+import { Link } from "react-router-dom";
 
-<script>
-  export default {
-    name: '401'
-  }
-</script>
+const Error401: React.FC = () => {
+  return (
+    <main>
+      <h1>Not authenticated!</h1>
+      <p>You are not authenticated!</p>
+      <p><Link className="btn" to="/">Back to safety!</Link></p>
+    </main>
+  );
+}
+
+
+export default Error401
