@@ -1,0 +1,35 @@
+// <%- include('../../shared/includes/head', { pageTitle: 'Your Cart' }) %>
+// <script src="/scripts/cart-item-management.js" defer></script>
+
+const Cart: React.FC = () => {
+  return (
+    <main>
+      <h1>Your Cart</h1>
+      <ul id="cart-items">
+        {/* <% for (const cartItem of locals.cart.items) { %> */}
+        <li>
+          {/* <%- include('includes/cart-item', { item: cartItem }) %> */}
+        </li>
+        {/* <% } %> */}
+      </ul>
+      <div id="cart-total">
+        <p>Total: $<span id="cart-total-price">
+          {/* <%= locals.cart.totalPrice.toFixed(2) %> */}
+        </span></p>
+
+        {/* <% if (locals.isAuth && locals.cart.totalQuantity > 0) { %> */}
+        <form action="/orders" method="POST">
+          <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
+          <button className="btn">Buy Products</button>
+        </form>
+        {/* <% } else { %> */}
+        <p id="cart-total-fallback">Log in and add item to the cart to proceed and purchase the items.</p>
+        {/* <% } %> */}
+      </div>
+    </main>
+
+  );
+}
+
+
+export default Cart
