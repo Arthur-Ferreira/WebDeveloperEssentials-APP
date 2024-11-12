@@ -11,7 +11,6 @@ type IProduct = {
 
 const ProductItem: React.FC<IProduct> = ({ product }) => {
   return (
-
     <article className="product-item">
       <img src={product.imageUrl} alt={product.title} />
       <div className="product-item-content">
@@ -26,7 +25,6 @@ const ProductItem: React.FC<IProduct> = ({ product }) => {
         </div>
       </div>
     </article>
-
   );
 }
 

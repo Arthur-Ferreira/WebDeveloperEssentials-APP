@@ -17,7 +17,7 @@ const NavItems: React.FC = () => {
         <li><Link to="/login">Login</Link></li>
         <li>
           <form action="/logout" method="POST">
-            {/* <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>"> */}
+            {/* <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" /> */}
               <button>Logout</button>
           </form>
         </li>

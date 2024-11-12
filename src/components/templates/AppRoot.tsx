@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import AppHeader from "./AppHeader";
-import AppFooter from "./AppFooter";
+import AppHeader from "../organisms/AppHeader";
+import AppFooter from "../organisms/AppFooter";
 
 const AppRoot: React.FC = () => {
   return (

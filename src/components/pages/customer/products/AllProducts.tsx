@@ -1,7 +1,4 @@
-// import "../../../less/products.less";
-// import "../../../less/carousel.less";
-
-import ProductItem from "../../shared/includes/ProductItem";
+import ProductItem from "../../../molecules/ProductItem";
 
 export default function AllProducts() {
 

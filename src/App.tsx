@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import AppRoot from "./components/pages/shared/includes/AppRoot";
+import AppRoot from "./components/templates/AppRoot";
 import AllProducts from "./components/pages/customer/products/AllProducts";
 import Signup from "./components/pages/customer/auth/Signup";
 import Login from "./components/pages/customer/auth/Login";

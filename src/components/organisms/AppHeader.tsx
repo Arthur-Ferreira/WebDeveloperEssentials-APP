@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import NavItems from "./NavItems";
-
-import "../../../less/navigation.less";
+import NavItems from "../molecules/NavItems";
 
 
 const AppHeader: React.FC = () => {
