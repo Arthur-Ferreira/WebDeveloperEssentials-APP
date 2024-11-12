@@ -1,15 +1,16 @@
 // import "../../../less/navigation.less"
 
 import { Link } from "react-router-dom";
+import NavItems from "./styles";
+import Badge from "../../atoms/Badge";
 
 
-const NavItems: React.FC = () => {
+const Navigation: React.FC = () => {
   return (
     <>
-      <ul className="nav-items">
-
+      <NavItems>
         <li><Link to="/">Shop</Link></li>
-        <li><Link to="/cart">Cart <span className="badge"></span></Link></li>
+        <li><Link to="/cart">Cart <Badge>Teste</Badge></Link></li>
         <li><Link to="/orders">Orders</Link></li>
         <li><Link to="/admin/products">Manage Products</Link></li>
         <li><Link to="/admin/orders">Manage Orders</Link></li>
@@ -21,10 +22,10 @@ const NavItems: React.FC = () => {
               <button>Logout</button>
           </form>
         </li>
-      </ul>
+      </NavItems>
     </>
   );
 }
 
 
-export default NavItems
+export default Navigation

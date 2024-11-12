@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import NavItems from "../molecules/NavItems";
+import Navigation from "../molecules/Navigation";
 
 
 const AppHeader: React.FC = () => {
@@ -14,7 +14,7 @@ const AppHeader: React.FC = () => {
             <li><Link to="/cart">Cart</Link></li>
             <li><Link to="/orders">Order</Link></li>
           </ul>
-          <NavItems />
+          <Navigation />
         </nav>
         <button id="mobile-menu-btn">
           <span></span>
@@ -24,7 +24,7 @@ const AppHeader: React.FC = () => {
       </header>
       <aside id="mobile-menu">
         <nav>
-          <NavItems />
+          <Navigation />
         </nav>
       </aside>
     </>
