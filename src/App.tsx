@@ -1,17 +1,16 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import AppRoot from "./components/shared/includes/AppRoot";
-import AllProducts from "./components/customer/products/AllProducts";
-import Signup from "./components/customer/auth/Signup";
-import Login from "./components/customer/auth/Login";
-import ProdcutDetails from "./components/customer/products/ProductDetails";
-import AllOrders from "./components/customer/orders/AllOrders";
-import AdminOrders from "./components/admin/orders/AdminOrders";
-import AdminProducts from "./components/admin/products/AdminProducts";
-import Cart from "./components/customer/cart/Cart";
+import AppRoot from "./components/pages/shared/includes/AppRoot";
+import AllProducts from "./components/pages/customer/products/AllProducts";
+import Signup from "./components/pages/customer/auth/Signup";
+import Login from "./components/pages/customer/auth/Login";
+import ProdcutDetails from "./components/pages/customer/products/ProductDetails";
+import AllOrders from "./components/pages/customer/orders/AllOrders";
+import AdminOrders from "./components/pages/admin/orders/AdminOrders";
+import AdminProducts from "./components/pages/admin/products/AdminProducts";
+import Cart from "./components/pages/customer/cart/Cart";
 
-import "./less/base.less";
 import "./less/auth.less";
 import "./less/carousel.less";
 import "./less/cart.less";
