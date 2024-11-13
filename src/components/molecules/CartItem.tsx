@@ -1,8 +1,6 @@
 import React from "react"
 
 const CartItem: React.FC = () => {
-
-
   return (
     <article className="cart-item">
       <div className="cart-item-info">

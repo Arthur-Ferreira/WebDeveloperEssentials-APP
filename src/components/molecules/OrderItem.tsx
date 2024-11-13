@@ -1,3 +1,6 @@
+import Badge from "../atoms/Badge";
+import Button from "../atoms/Button";
+
 const OrderItem: React.FC = () => {
   return (
     <article className="order-item">
@@ -8,9 +11,11 @@ const OrderItem: React.FC = () => {
           </span>
           {/* - <%= order.formattedDate %> */}
         </h2>
-        <p><span className="badge">
+        <p><Badge>
+          Teste
+          {/* {order.status.toUpperCase()} */}
           {/* <%= order.status.toUpperCase() %> */}
-        </span></p>
+        </Badge></p>
       </header>
 
       <section className="order-details">
@@ -57,7 +62,7 @@ const OrderItem: React.FC = () => {
               Cancelled
             </option>
           </select>
-          <button className="btn btn-alt">Update</button>
+          <Button $alt>Update</Button>
         </form>
       </section>
       {/* <% } %> */}

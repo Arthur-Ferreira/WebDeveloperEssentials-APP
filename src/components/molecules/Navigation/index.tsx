@@ -3,6 +3,7 @@
 import { Link } from "react-router-dom";
 import NavItems from "./styles";
 import Badge from "../../atoms/Badge";
+import Button from "../../atoms/Button";
 
 
 const Navigation: React.FC = () => {
@@ -19,7 +20,7 @@ const Navigation: React.FC = () => {
         <li>
           <form action="/logout" method="POST">
             {/* <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" /> */}
-              <button>Logout</button>
+              <Button>Logout</Button>
           </form>
         </li>
       </NavItems>

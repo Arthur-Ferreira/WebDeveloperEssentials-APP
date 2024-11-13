@@ -1,4 +1,3 @@
-
 import NavBadge from "./styles";
 
 const Badge = ({ children }: { children: string }): JSX.Element => {

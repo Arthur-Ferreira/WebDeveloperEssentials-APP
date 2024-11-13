@@ -1,3 +1,5 @@
+import Button from "../atoms/Button";
+
 const ProductForm: React.FC = () => {
   return (
 
@@ -37,8 +39,8 @@ const ProductForm: React.FC = () => {
       </p>
 
       <p>
-        <button type="reset" className="btn btn-alt">Reset</button>
-        <button className="btn">Save</button>
+        <Button type="reset" $alt>Reset</Button>
+        <Button>Save</Button>
       </p>
     </form>
 

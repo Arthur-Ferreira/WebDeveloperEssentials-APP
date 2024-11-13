@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../atoms/Button";
 
 type IProduct = {
   product: {
@@ -18,7 +19,7 @@ const ProductItem: React.FC<IProduct> = ({ product }) => {
         <div className="product-item-actions">
           {/* <% if (locals.isAdmin) { %> */}
           <Link className="btn btn-alt" to={`/admin/products/${product.id}`}>View & Edit</Link>
-          <button className="btn btn-alt" data-productid={product.id} data-csrf="<%= locals.csrfToken %>">Delete</button>
+          <Button $alt data-productid={product.id} data-csrf="<%= locals.csrfToken %>">Delete</Button>
           {/* id } else { %> */}
           <Link className="btn btn-alt" to={`/products/${product.id}`}>View Details</Link>
           {/* <% } %> */}
