@@ -1,3 +1,4 @@
+import List from "../../../atoms/List";
 import ProductItem from "../../../molecules/ProductItem";
 
 export default function AllProducts() {
@@ -34,13 +35,13 @@ export default function AllProducts() {
     <>
       <main>
         <h1>All Products</h1>
-        <ul id="products-grid">
+        <List>
           {products.map(product => (
             <li>
               <ProductItem product={product} />
             </li>
           ))}
-        </ul>
+        </List>
       </main>
     </>
   );
