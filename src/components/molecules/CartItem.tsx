@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "../atoms/Button";
 
 const CartItem: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const CartItem: React.FC = () => {
 
       <form className="cart-item-management" data-productid="<%= item.product.id %>" data-csrf="<%= locals.csrfToken %>">
         <input type="number" value="<%= item.quantity %>" required />
-        <button className="btn btn-alt">Update</button>
+        <Button $alt>Update</Button>
       </form>
     </article>
   );

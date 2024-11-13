@@ -18,10 +18,10 @@ const ProductItem: React.FC<IProduct> = ({ product }) => {
         <h2>{product.title}</h2>
         <div className="product-item-actions">
           {/* <% if (locals.isAdmin) { %> */}
-          <Link className="btn btn-alt" to={`/admin/products/${product.id}`}>View & Edit</Link>
-          <Button $alt data-productid={product.id} data-csrf="<%= locals.csrfToken %>">Delete</Button>
+          {/* <Button as={Link} $alt to={`/admin/products/${product.id}`}>View & Edit</Button>
+          <Button $alt data-productid={product.id} data-csrf="<%= locals.csrfToken %>">Delete</Button> */}
           {/* id } else { %> */}
-          <Link className="btn btn-alt" to={`/products/${product.id}`}>View Details</Link>
+          <Button as={Link} $alt to={`/products/${product.id}`}>View Details</Button>
           {/* <% } %> */}
         </div>
       </div>
