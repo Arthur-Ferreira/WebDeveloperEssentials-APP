@@ -1,12 +1,14 @@
 import styled from "styled-components";
+import { colors, spacing } from "../../../global/vars";
 
-const NavBadge = styled.span`
-  margin-left: @space-2;
-  padding: 0.15rem @space-4;
+const SBadge = styled.span`
+  display: inline-block
+  margin-left: ${spacing.space2};
+  padding: 0.15rem ${spacing.space4};
   border-radius: 10rem;
-  background-color: @color-primary-500;
-  color: @color-primary-500-contrast;
+  background-color: ${colors.primary500};
+  color: ${colors.primary500Contrast};
 `;
 
 
-export default NavBadge
+export default SBadge
