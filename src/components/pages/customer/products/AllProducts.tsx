@@ -37,7 +37,7 @@ export default function AllProducts() {
         <h1>All Products</h1>
         <List>
           {products.map(product => (
-            <li>
+            <li key={product.id}>
               <ProductItem product={product} />
             </li>
           ))}
