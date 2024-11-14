@@ -11,11 +11,6 @@ const AppHeader: React.FC = () => {
       <MainHeader>
         <div id="logo"><Button as={Link} to="/">WDE</Button></div>
         <Nav $desktop>
-          <ul>
-            <li><Button as={Link} to="/products">Shop</Button></li>
-            <li><Button as={Link} to="/cart">Cart</Button></li>
-            <li><Button as={Link} to="/orders">Order</Button></li>
-          </ul>
           <Navigation />
         </Nav>
         <MobileMenuBtn>
