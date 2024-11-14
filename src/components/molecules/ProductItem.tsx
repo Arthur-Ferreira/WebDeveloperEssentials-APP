@@ -20,7 +20,7 @@ const ProductItem: React.FC<IProduct> = ({ product }) => {
           {/* <Anchor to={`/admin/products/${product.id}`}>View & Edit</Anchor>
           <Anchor data-productid={product.id} data-csrf="<%= locals.csrfToken %>">Delete</Anchor> */}
           {/* id } else { %> */}
-          <Anchor to={`/products/${product.id}`}>View Details</Anchor>
+          <Anchor to={`/products/${product.id}`} $border>View Details</Anchor>
           {/* <% } %> */}
         </div>
       </div>
