@@ -1,29 +1,28 @@
-import { Link } from "react-router-dom";
 import NavItems from "./styles";
 // import Badge from "../../atoms/Badge";
-import Button from "../../atoms/Button";
+import Anchor from "../../atoms/Anchor";
 
 
 const Navigation: React.FC = () => {
   return (
     <>
       <NavItems>
-        <li><Button as={Link} to="/">Shop</Button></li>
+        <li><Anchor to="/">Shop</Anchor></li>
         <li>
-          <Button as={Link} to="/cart">
+          <Anchor to="/cart">
             Cart
             {/* <Badge>Teste</Badge> */}
-          </Button>
+          </Anchor>
         </li>
-        <li><Button as={Link} to="/orders">Orders</Button></li>
-        {/* <li><Button as={Link} to="/admin/products">Manage Products</Button></li>
-        <li><Button as={Link} to="/admin/orders">Manage Orders</Button></li>
-        <li><Button as={Link} to="/signup">Signup</Button></li>
-        <li><Button as={Link} to="/login">Login</Button></li>
-        <li>
+        <li><Anchor to="/orders">Orders</Anchor></li>
+        {/* <li><Anchor to="/admin/products">Manage Products</Anchor></li>
+        <li><Anchor to="/admin/orders">Manage Orders</Anchor></li> */}
+        <li><Anchor to="/signup">Signup</Anchor></li>
+        <li><Anchor to="/login">Login</Anchor></li>
+        {/* <li>
           <form action="/logout" method="POST">
             // <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
-            <Button>Logout</Button>
+            <Anchor>Logout</Anchor>
           </form>
         </li> */}
       </NavItems>

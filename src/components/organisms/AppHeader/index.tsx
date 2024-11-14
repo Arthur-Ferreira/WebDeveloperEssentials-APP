@@ -1,16 +1,15 @@
-import { Link } from "react-router-dom";
 import Navigation from "../../molecules/Navigation";
 import { AsideMenu, MainHeader, MobileMenuBtn } from "./styles";
-import Button from "../../atoms/Button";
 import Nav from "../../atoms/Nav";
+import Anchor from "../../atoms/Anchor";
 
 
 const AppHeader: React.FC = () => {
   return (
     <>
       <MainHeader>
-        <div id="logo"><Button as={Link} to="/">WDE</Button></div>
-        <Nav $desktop>
+        <div id="logo"><Anchor to="/">WDE</Anchor></div>
+        <Nav>
           <Navigation />
         </Nav>
         <MobileMenuBtn>
@@ -20,7 +19,7 @@ const AppHeader: React.FC = () => {
         </MobileMenuBtn>
       </MainHeader>
       <AsideMenu>
-        <Nav>
+        <Nav $mobile>
           <Navigation />
         </Nav>
       </AsideMenu>
