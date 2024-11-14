@@ -1,5 +1,5 @@
 import NavItems from "./styles";
-// import Badge from "../../atoms/Badge";
+import Badge from "../../atoms/Badge";
 import Anchor from "../../atoms/Anchor";
 
 
@@ -11,7 +11,7 @@ const Navigation: React.FC = () => {
         <li>
           <Anchor to="/cart">
             Cart
-            {/* <Badge>Teste</Badge> */}
+            <Badge>1</Badge>
           </Anchor>
         </li>
         <li><Anchor to="/orders">Orders</Anchor></li>
