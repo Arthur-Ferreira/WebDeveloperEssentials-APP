@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
-import { breakpoints, spacing } from "../../../global/vars";
+import { breakpoints, colors, spacing } from "../../../global/vars";
 
-const SNav = styled.nav<{ $desktop?: boolean }>`
+const SNav = styled.nav<{ $mobile?: boolean }>`
     display: none;
 
     @media (min-width: ${breakpoints.tablet}) {
@@ -9,10 +9,12 @@ const SNav = styled.nav<{ $desktop?: boolean }>`
     }
     
     ${props =>
-        props.$desktop && css`    
+        props.$mobile && css`    
         height: 20rem;
         width: 90%;
         margin: ${spacing.space4} auto;
+        font-size: 1.75rem;
+        color: ${colors.primary100};
     `};
 `;
 

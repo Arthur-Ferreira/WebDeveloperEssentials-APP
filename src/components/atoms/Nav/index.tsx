@@ -1,9 +1,9 @@
 import React from "react";
 import SNav from "./styles";
 
-const Nav = ({ children, $desktop }: { children: React.ReactNode, $desktop?: boolean }) => {
+const Nav = ({ children, $mobile }: { children: React.ReactNode, $mobile?: boolean }) => {
     return (
-        <SNav $desktop={$desktop}>{children}</SNav>
+        <SNav $mobile={$mobile}>{children}</SNav>
     );
 }
 
