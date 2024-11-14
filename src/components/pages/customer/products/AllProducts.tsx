@@ -2,6 +2,7 @@ import List from "../../../atoms/List";
 import ProductItem from "../../../molecules/ProductItem";
 
 import boldBag from "../../../../assets/promo/boldBagSaleBanner.png";
+import { H1 } from "../../../atoms/Typography";
 
 export default function AllProducts() {
 
@@ -36,7 +37,7 @@ export default function AllProducts() {
   return (
     <>
       <main>
-        <h1>All Products</h1>
+        <H1>All Products</H1>
         <List>
           {products.map(product => (
             <li key={product.id}>

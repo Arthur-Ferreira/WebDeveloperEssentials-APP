@@ -1,4 +1,5 @@
 import Button from "../../../atoms/Button";
+import { H1 } from "../../../atoms/Typography";
 
 const ProdcutDetails: React.FC = () => {
   return (
@@ -6,14 +7,14 @@ const ProdcutDetails: React.FC = () => {
       <header>
         {/* <img src="<%= product.imageUrl %>" alt="<%= product.title %>"> */}
         <div id="product-info">
-          <h1>
-            {/* <!-- <%= product.title %> --> */}
-          </h1>
+          <H1>
+            Title
+          </H1>
           <p>
             {/* <!-- $<%= product.price %> --> */}
           </p>
           <Button
-          // class="btn" data-productid="<%= product.id %>" data-csrf="<%= locals.csrfToken %>"
+          // data-productid="<%= product.id %>" data-csrf="<%= locals.csrfToken %>"
           >Add to
             Cart</Button>
         </div>

@@ -2,11 +2,12 @@
 // <script src="/scripts/cart-item-management.js" defer></script>
 
 import Button from "../../../atoms/Button";
+import { H1 } from "../../../atoms/Typography";
 
 const Cart: React.FC = () => {
   return (
     <main>
-      <h1>Your Cart</h1>
+      <H1>Your Cart</H1>
       <ul id="cart-items">
         {/* <% for (const cartItem of locals.cart.items) { %> */}
         <li>
