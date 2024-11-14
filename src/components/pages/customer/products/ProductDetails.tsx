@@ -1,3 +1,5 @@
+import Button from "../../../atoms/Button";
+
 const ProdcutDetails: React.FC = () => {
   return (
     <main id="product-details">
@@ -10,10 +12,10 @@ const ProdcutDetails: React.FC = () => {
           <p>
             {/* <!-- $<%= product.price %> --> */}
           </p>
-          <button
+          <Button
           // class="btn" data-productid="<%= product.id %>" data-csrf="<%= locals.csrfToken %>"
           >Add to
-            Cart</button>
+            Cart</Button>
         </div>
       </header>
 

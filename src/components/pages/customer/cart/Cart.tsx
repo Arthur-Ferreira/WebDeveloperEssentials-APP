@@ -1,6 +1,8 @@
 // <%- include('../../shared/includes/head', { pageTitle: 'Your Cart' }) %>
 // <script src="/scripts/cart-item-management.js" defer></script>
 
+import Button from "../../../atoms/Button";
+
 const Cart: React.FC = () => {
   return (
     <main>
@@ -20,7 +22,7 @@ const Cart: React.FC = () => {
         {/* <% if (locals.isAuth && locals.cart.totalQuantity > 0) { %> */}
         <form action="/orders" method="POST">
           <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
-          <button className="btn">Buy Products</button>
+          <Button>Buy Products</Button>
         </form>
         {/* <% } else { %> */}
         <p id="cart-total-fallback">Log in and add item to the cart to proceed and purchase the items.</p>

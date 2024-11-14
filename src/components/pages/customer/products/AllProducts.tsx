@@ -1,32 +1,34 @@
 import List from "../../../atoms/List";
 import ProductItem from "../../../molecules/ProductItem";
 
+import boldBag from "../../../../assets/promo/boldBagSaleBanner.png";
+
 export default function AllProducts() {
 
   const products = [
     {
       title: "Titulo 1",
-      imageUrl: "testeimage.png",
+      imageUrl: `${boldBag}`,
       id: "1"
     }, {
       title: "Titulo 2",
-      imageUrl: "testeimage.png",
+      imageUrl: `${boldBag}`,
       id: "2"
     }, {
       title: "Titulo 3",
-      imageUrl: "testeimage.png",
+      imageUrl: `${boldBag}`,
       id: "3"
     }, {
       title: "Titulo 4",
-      imageUrl: "testeimage.png",
+      imageUrl: `${boldBag}`,
       id: "4"
     }, {
       title: "Titulo 5",
-      imageUrl: "testeimage.png",
+      imageUrl: `${boldBag}`,
       id: "5"
     }, {
       title: "Titulo 6",
-      imageUrl: "testeimage.png",
+      imageUrl: `${boldBag}`,
       id: "6"
     }
   ];
