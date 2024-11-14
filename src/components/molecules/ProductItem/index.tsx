@@ -1,4 +1,6 @@
-import Anchor from "../atoms/Anchor";
+import Anchor from "../../atoms/Anchor";
+import { H3 } from "../../atoms/Typography";
+import { SProductItem, ProductItemContent, ProductItemActions } from "./styles";
 
 type IProduct = {
   product: {
@@ -11,20 +13,20 @@ type IProduct = {
 
 const ProductItem: React.FC<IProduct> = ({ product }) => {
   return (
-    <article className="product-item">
+    <SProductItem>
       <img src={product.imageUrl} alt={product.title} />
-      <div className="product-item-content">
-        <h2>{product.title}</h2>
-        <div className="product-item-actions">
+      <ProductItemContent>
+        <H3>{product.title}</H3>
+        <ProductItemActions>
           {/* <% if (locals.isAdmin) { %> */}
           {/* <Anchor to={`/admin/products/${product.id}`}>View & Edit</Anchor>
           <Anchor data-productid={product.id} data-csrf="<%= locals.csrfToken %>">Delete</Anchor> */}
           {/* id } else { %> */}
           <Anchor to={`/products/${product.id}`} $border>View Details</Anchor>
           {/* <% } %> */}
-        </div>
-      </div>
-    </article>
+        </ProductItemActions>
+      </ProductItemContent>
+    </SProductItem>
   );
 }
 
