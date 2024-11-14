@@ -9,23 +9,23 @@ const SButton = styled.button<{ $alt?: boolean }>`
   color: ${colors.primary500Contrast};
   border: 1px solid ${colors.primary500};
   border-radius: ${spacing.borderRadiusSmall};
-
+  
   &:hover,
   &:active {
     background-color: ${colors.primary700};
     border-color: ${colors.primary700};
-  }
-
-  ${props =>
+    }
+    
+    ${props =>
     props.$alt && css`
     background-color: transparent;
     color: ${colors.primary500};
-
+    
     &:hover,
     &:active {
-        background-color: ${colors.primary50};
-    }
-  `};
+      background-color: ${colors.primary50};
+      }
+    `};
 `;
 
 
