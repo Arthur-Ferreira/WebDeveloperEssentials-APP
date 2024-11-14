@@ -1,14 +1,14 @@
 import styled, { css } from "styled-components";
 import Button from "../Button";
 import { Link } from "react-router-dom";
-import { colors, spacing } from "../../../global/vars";
+import { breakpoints, colors, spacing } from "../../../global/vars";
 
 const SLink = styled(Button).attrs({ as: Link }) <{ $border?: boolean }>`
   text-decoration: none;
   color: ${colors.primary400};
   padding: ${spacing.space2} ${spacing.space4};
 
-  @media (min-width: 48rem) {
+  @media (min-width: ${breakpoints.tablet}) {
     border-radius: ${spacing.borderRadiusSmall};
   }
 
