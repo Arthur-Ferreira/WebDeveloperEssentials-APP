@@ -11,14 +11,6 @@ import AdminOrders from "./components/pages/admin/orders/AdminOrders";
 import AdminProducts from "./components/pages/admin/products/AdminProducts";
 import Cart from "./components/pages/customer/cart/Cart";
 
-import "./less/auth.less";
-import "./less/carousel.less";
-import "./less/cart.less";
-import "./less/forms.less";
-import "./less/navigation.less";
-import "./less/orders.less";
-import "./less/products.less";
-
 
 const router = createBrowserRouter([
   {
