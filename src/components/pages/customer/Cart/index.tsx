@@ -26,7 +26,7 @@ const Cart = (): React.ReactNode => {
       item: {
         product: {
           id: 1,
-          title: "Teste",
+          title: "Teste 1",
           price: 29.90,
         },
         quantity: 1,
@@ -37,7 +37,7 @@ const Cart = (): React.ReactNode => {
       item: {
         product: {
           id: 2,
-          title: "Teste",
+          title: "Teste 2",
           price: 29.90,
         },
         quantity: 1,
@@ -48,7 +48,7 @@ const Cart = (): React.ReactNode => {
       item: {
         product: {
           id: 3,
-          title: "Teste",
+          title: "Teste 3",
           price: 29.90,
         },
         quantity: 1,
