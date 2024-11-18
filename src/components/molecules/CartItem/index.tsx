@@ -1,6 +1,7 @@
 import React from "react"
 import Button from "../../atoms/Button";
 import { H3 } from "../../atoms/Typography";
+import { SCartItem } from "./styles";
 
 interface IProduct {
   item: {
@@ -17,7 +18,7 @@ interface IProduct {
 
 const CartItem = ({ item }: { item: IProduct }): React.ReactNode => {
   return (
-    <article className="cart-item">
+    <SCartItem>
       <div className="cart-item-info">
         <H3>
           {item.item.product.title}
@@ -26,14 +27,15 @@ const CartItem = ({ item }: { item: IProduct }): React.ReactNode => {
           {item.item.totalPrice.toFixed(2)}
         </span> <span className="cart-product-price">
             (${item.item.product.price.toFixed(2)})
-          </span></p>
+          </span>
+        </p>
       </div>
 
       <form className="cart-item-management" data-productid="<%= item.product.id %>" data-csrf="<%= locals.csrfToken %>">
         <input type="number" value="<%= item.quantity %>" required />
         <Button $alt>Update</Button>
       </form>
-    </article>
+    </SCartItem>
   );
 }
 
