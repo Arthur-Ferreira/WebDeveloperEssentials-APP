@@ -1,4 +1,5 @@
 import Anchor from "../../atoms/Anchor";
+// import Button from "../../atoms/Button";
 import { H3 } from "../../atoms/Typography";
 import { SProductItem, ProductItemContent, ProductItemActions } from "./styles";
 
@@ -19,8 +20,8 @@ const ProductItem: React.FC<IProduct> = ({ product }) => {
         <H3>{product.title}</H3>
         <ProductItemActions>
           {/* <% if (locals.isAdmin) { %> */}
-          {/* <Anchor to={`/admin/products/${product.id}`}>View & Edit</Anchor>
-          <Anchor data-productid={product.id} data-csrf="<%= locals.csrfToken %>">Delete</Anchor> */}
+          {/* <Anchor to={`/admin/products/${product.id}`} $border>View & Edit</Anchor>
+          <Button data-productid={product.id} data-csrf="<%= locals.csrfToken %>">Delete</Button> */}
           {/* id } else { %> */}
           <Anchor to={`/products/${product.id}`} $border>View Details</Anchor>
           {/* <% } %> */}
