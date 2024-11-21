@@ -2,6 +2,7 @@ import React from "react"
 import Button from "../../atoms/Button";
 import { H3 } from "../../atoms/Typography";
 import { SCartItem } from "./styles";
+import Input from "../../atoms/Input";
 
 interface IProduct {
   item: {
@@ -32,7 +33,7 @@ const CartItem = ({ item }: { item: IProduct }): React.ReactNode => {
       </div>
 
       <form className="cart-item-management" data-productid="<%= item.product.id %>" data-csrf="<%= locals.csrfToken %>">
-        <input type="number" value="<%= item.quantity %>" required />
+        <Input type="number" value="<%= item.quantity %>" required />
         <Button $alt>Update</Button>
       </form>
     </SCartItem>
