@@ -1,26 +1,33 @@
+import Anchor from "../../../atoms/Anchor";
+import Button from "../../../atoms/Button";
+import Form from "../../../atoms/Form";
+import Input from "../../../atoms/Input";
+import Label from "../../../atoms/Label";
+import { H2 } from "../../../atoms/Typography";
+
 const Login: React.FC = () => {
   return (
     <main>
-      <h1>Login</h1>
+      <H2>Login</H2>
       {/* <% if (inputData.errorMessage) { %> */}
       {/* <section className="alert"> */}
-        {/* <h2>Invalid Credentials</h2> */}
-        {/* <p><%= inputData.errorMessage %></p> */}
+      {/* <h2>Invalid Credentials</h2> */}
+      {/* <p><%= inputData.errorMessage %></p> */}
       {/* </section> */}
-    {/* <% } %> */}
-      <form action="/login" method="POST">
-        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
-          <p>
-            <label htmlFor="email">E-Mail</label>
-            <input type="email" id="email" name="email" value="<%= inputData.email %>" required />
-          </p>
-          <p>
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" name="password" value="<%= inputData.password %>" required />
-          </p>
-          <button className="btn">Login</button>
-          <p id="switch-form"><a href="/signup">Create a new user</a></p>
-      </form>
+      {/* <% } %> */}
+      <Form action="/login" method="POST">
+        <Input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
+        <p>
+          <Label htmlFor="email">E-Mail</Label>
+          <Input $full type="email" id="email" name="email" value="<%= inputData.email %>" required />
+        </p>
+        <p>
+          <Label htmlFor="password">Password</Label>
+          <Input $full type="password" id="password" name="password" value="<%= inputData.password %>" required />
+        </p>
+        <Button>Login</Button>
+        <p id="switch-form"><Anchor to="/signup">Create a new user</Anchor></p>
+      </Form>
     </main>
   );
 }

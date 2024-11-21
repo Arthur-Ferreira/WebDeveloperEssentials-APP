@@ -1,48 +1,56 @@
+import Anchor from "../../../atoms/Anchor";
+import Button from "../../../atoms/Button";
+import Form from "../../../atoms/Form";
+import Input from "../../../atoms/Input";
+import Label from "../../../atoms/Label";
+import { H2 } from "../../../atoms/Typography";
+
+
 const Signup: React.FC = () => {
   return (
     <main>
-      <h1>Create New Account</h1>
+      <H2>Create New Account</H2>
       {/* <% if (inputData.errorMessage) { %> */}
       {/* <section className="alert"> */}
-        {/* <h2>Invalid Input</h2> */}
-        {/* <p><%= inputData.errorMessage %></p> */}
+      {/* <h2>Invalid Input</h2> */}
+      {/* <p><%= inputData.errorMessage %></p> */}
       {/* </section> */}
       {/* <% } %> */}
-      <form action="/signup" method="POST">
-        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
+      <Form action="/signup" method="POST">
+        <Input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
         <p>
-          <label htmlFor="email">E-Mail</label>
-          <input type="email" id="email" name="email"
+          <Label htmlFor="email">E-Mail</Label>
+          <Input $full type="email" id="email" name="email"
             value="<%= inputData.email %>" required />
         </p>
         <p>
-          <label htmlFor="confirm-email">Confirm Email</label>
-          <input type="email" id="confirm-email" name="confirm-email" value="<%= inputData.confirmEmail %>" required />
-
+          <Label htmlFor="confirm-email">Confirm Email</Label>
+          <Input $full type="email" id="confirm-email" name="confirm-email" value="<%= inputData.confirmEmail %>" required />
         </p>
         <p>
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" min="6" value="<%= inputData.password %>" required />
+          <Label htmlFor="password">Password</Label>
+          <Input $full type="password" id="password" name="password" min="6" value="<%= inputData.password %>" required />
+        </p>
+        <hr />
+        <p>
+          <Label htmlFor="fullname">Full Name</Label>
+          <Input $full type="text" id="fullname" name="fullname" value="<%= inputData.fullname %>" required />
         </p>
         <p>
-          <label htmlFor="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" value="<%= inputData.fullname %>" required />
+          <Label htmlFor="street">Street</Label>
+          <Input $full type="text" id="street" name="street" value="<%= inputData.street %>" required />
         </p>
         <p>
-          <label htmlFor="street">Street</label>
-          <input type="text" id="street" name="street" value="<%= inputData.street %>" required />
+          <Label htmlFor="postal">Postal Code</Label>
+          <Input $full type="text" id="postal" name="postal" min="5" max="5" value="<%= inputData.postal %>" required />
         </p>
         <p>
-          <label htmlFor="postal">Postal Code</label>
-          <input type="text" id="postal" name="postal" min="5" max="5" value="<%= inputData.postal %>" required />
+          <Label htmlFor="city">City</Label>
+          <Input $full type="text" id="city" name="city" value="<%= inputData.city %>" required />
         </p>
-        <p>
-          <label htmlFor="city">City</label>
-          <input type="text" id="city" name="city" value="<%= inputData.city %>" required />
-        </p>
-        <button className="btn">Create Account</button>
-        <p id="switch-form"><a href="/login">Login instead</a></p>
-      </form>
+        <Button>Create Account</Button>
+        <p id="switch-form"><Anchor to="/login" $border>Login instead</Anchor></p>
+      </Form>
     </main>
   );
 }
