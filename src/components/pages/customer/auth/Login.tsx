@@ -1,5 +1,6 @@
 import Anchor from "../../../atoms/Anchor";
 import Button from "../../../atoms/Button";
+import Divider from "../../../atoms/Divider";
 import Form from "../../../atoms/Form";
 import Input from "../../../atoms/Input";
 import Label from "../../../atoms/Label";
@@ -25,6 +26,7 @@ const Login: React.FC = () => {
           <Label htmlFor="password">Password</Label>
           <Input $full type="password" id="password" name="password" value="<%= inputData.password %>" required />
         </p>
+        <Divider />
         <Button>Login</Button>
         <p id="switch-form"><Anchor to="/signup">Create a new user</Anchor></p>
       </Form>
