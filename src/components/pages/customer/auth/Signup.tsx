@@ -49,7 +49,7 @@ const Signup: React.FC = () => {
           <Input $full type="text" id="city" name="city" value="<%= inputData.city %>" required />
         </p>
         <Button>Create Account</Button>
-        <p id="switch-form"><Anchor to="/login" $border>Login instead</Anchor></p>
+        <p id="switch-form"><Anchor to="/login">Login instead</Anchor></p>
       </Form>
     </main>
   );
