@@ -5,7 +5,14 @@ const AdminOrders: React.FC = () => {
   return (
     <main>
       <h1>Order Administration</h1>
-      {/* <%- include('../../shared/includes/order-list') %> */}
+      <ol>
+        {/* <% for (const order of orders) { %> */}
+        <li>
+          {/* <%- include('order-item', { order: order }) %> */}
+
+        </li>
+        {/* <% } %> */}
+      </ol>
     </main>
 
   );
