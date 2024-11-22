@@ -6,12 +6,13 @@ const AdminOrders: React.FC = () => {
     <main>
       <h1>Order Administration</h1>
       <ol>
-        {/* <% for (const order of orders) { %> */}
-        <li>
-          {/* <%- include('order-item', { order: order }) %> */}
+        {/* {orders.map(order => {
+          <li>
 
-        </li>
-        {/* <% } %> */}
+          </li>
+        }) 
+        }
+        */}
       </ol>
     </main>
 

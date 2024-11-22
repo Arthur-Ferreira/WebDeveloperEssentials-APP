@@ -11,8 +11,8 @@ const Navigation: React.FC = () => {
         <li>
           <Anchor to="/cart">Cart <Badge>1</Badge></Anchor>
         </li>
+        <li><Anchor to="/orders">Orders</Anchor></li>
         {/* 
-          <li><Anchor to="/orders">Orders</Anchor></li>
           <li><Anchor to="/admin/products">Manage Products</Anchor></li>
           <li><Anchor to="/admin/orders">Manage Orders</Anchor></li> 
         */}
