@@ -5,6 +5,7 @@ import Anchor from "../../atoms/Anchor";
 import { useAppDispatch, useAppSelector } from "../../../store/hooks";
 import { open, close } from "../../../feature/mobileSlice";
 import MobileMenu from "../../molecules/MobileMenu";
+import Logo from "../../atoms/Logo";
 
 const AppHeader: React.FC = () => {
   const dispatch = useAppDispatch()
@@ -17,7 +18,7 @@ const AppHeader: React.FC = () => {
   return (
     <>
       <MainHeader>
-        <div id="logo"><Anchor to="/">WDE</Anchor></div>
+        <Logo><Anchor to="/">WDE</Anchor></Logo>
         <Nav>
           <Navigation />
         </Nav>
