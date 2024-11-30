@@ -53,7 +53,7 @@ declare global {
 
   interface ItemsProducts {
     product: IProduct
-    quantity: number
+    quantity: number | { $numberInt: string; }
     totalPrice: number | { $numberInt: string; }
   }
 
