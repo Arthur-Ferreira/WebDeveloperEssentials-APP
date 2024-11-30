@@ -2,6 +2,8 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import { GlobalStyles } from "./global";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 const container = document.getElementById("root");
 
@@ -10,8 +12,10 @@ if (container) {
 
   root.render(
     <React.StrictMode>
-      <GlobalStyles />
-      <App />
+      <Provider store={store}>
+        <GlobalStyles />
+        <App />
+      </Provider>
     </React.StrictMode>
   );
 } else {
