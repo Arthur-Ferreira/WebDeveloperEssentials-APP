@@ -1,10 +1,19 @@
 import Navigation from "../../molecules/Navigation";
-import { AsideMenu, MainHeader, MobileMenuBtn } from "./styles";
+import { MainHeader, MobileMenuBtn } from "./styles";
 import Nav from "../../atoms/Nav";
 import Anchor from "../../atoms/Anchor";
-
+import { useAppDispatch, useAppSelector } from "../../../store/hooks";
+import { open, close } from "../../../feature/mobileSlice";
+import MobileMenu from "../../molecules/MobileMenu";
 
 const AppHeader: React.FC = () => {
+  const dispatch = useAppDispatch()
+  const currentHeaderState = useAppSelector(state => state.mobile.isOpen)
+
+  const handleToggleMobileMenu = () => {
+    currentHeaderState === false ? dispatch(open()) : dispatch(close())
+  }
+
   return (
     <>
       <MainHeader>
@@ -12,17 +21,13 @@ const AppHeader: React.FC = () => {
         <Nav>
           <Navigation />
         </Nav>
-        <MobileMenuBtn>
+        <MobileMenuBtn onClick={handleToggleMobileMenu}>
           <span></span>
           <span></span>
           <span></span>
         </MobileMenuBtn>
       </MainHeader>
-      <AsideMenu>
-        <Nav $mobile>
-          <Navigation />
-        </Nav>
-      </AsideMenu>
+      <MobileMenu isOpen={currentHeaderState} />
     </>
   );
 }
