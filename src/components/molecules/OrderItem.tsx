@@ -1,19 +1,25 @@
+import { parseMixedNumber } from "../../utils/parserMixers";
 import Badge from "../atoms/Badge";
 import Button from "../atoms/Button";
 
+
 const OrderItem = ({ order }: { order: IOrder }): JSX.Element => {
+  const { productData, userData } = order
+  const { totalPrice, items } = productData
+
+  const parsetotalPrice = parseMixedNumber(totalPrice)
+
   return (
     <article className="order-item">
       <header className="order-summary">
         <h2>
           <span className="order-item-price">$
-            {order.productData.totalPrice}
+            {parsetotalPrice}
           </span>
           {/* -  order.formattedDate */}
         </h2>
         <p><Badge>
           {order.status.toUpperCase()}
-          {/*  order.status.toUpperCase() */}
         </Badge></p>
       </header>
 
@@ -26,16 +32,16 @@ const OrderItem = ({ order }: { order: IOrder }): JSX.Element => {
             </a>
           </p>
           <p>
-            {order.userData.address.street} {order.userData.address.postalCode} {order.userData.address.city}
+            {userData.address.street} {userData.address.postalCode} {userData.address.city}
           </p>
         </address>
         {/* } */}
         <ul>
-          {/* { order.productData.items */}
-          <li>
-            {/*  { item.product.title } - $ { item.totalPrice.toFixed(2)} ($ { item.product.price.toFixed(2)} x  { item.quantity)} */}
-          </li>
-          {/* } */}
+          {items.map(item => (
+            <li key={items.indexOf(item)}>
+              {item.product.title} - $ {parseMixedNumber(item.totalPrice)} ($ {parseMixedNumber(item.product.price)} x  {parseMixedNumber(item.quantity)})
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -44,7 +50,7 @@ const OrderItem = ({ order }: { order: IOrder }): JSX.Element => {
         <form>
           <input type="hidden" name="_csrf" value=" locals.csrfToken" />
           <input type="hidden" name="orderid" value=" order.id" />
-          <select name="status">
+          {/* <select name="status">
             <option value="pending"
             //  if (order.status === 'pending') { selected }
             >
@@ -60,7 +66,7 @@ const OrderItem = ({ order }: { order: IOrder }): JSX.Element => {
             >
               Cancelled
             </option>
-          </select>
+          </select> */}
           <Button $alt>Update</Button>
         </form>
       </section>
