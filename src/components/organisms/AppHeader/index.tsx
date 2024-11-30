@@ -22,7 +22,7 @@ const AppHeader: React.FC = () => {
         <Nav>
           <Navigation />
         </Nav>
-        <MobileMenuBtn onClick={handleToggleMobileMenu}>
+        <MobileMenuBtn type="button" title="mobile-menu-button" onClick={handleToggleMobileMenu}>
           <span></span>
           <span></span>
           <span></span>
