@@ -6,7 +6,7 @@ import AllProducts from "./components/pages/AllProducts";
 import Signup from "./components/pages/Signup";
 import Login from "./components/pages/Login";
 import ProdcutDetails from "./components/pages/ProductDetails";
-import AllOrders from "./components/pages/customer/orders/AllOrders";
+import AllOrders from "./components/pages/Orders";
 import AdminOrders from "./components/pages/admin/orders/AdminOrders";
 import AdminProducts from "./components/pages/admin/products/AdminProducts";
 import Cart from "./components/pages/Cart";
