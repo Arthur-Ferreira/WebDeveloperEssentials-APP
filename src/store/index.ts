@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-
+import mobileReducer from "../feature/mobileSlice";
 
 export const store = configureStore({
   reducer: {
-
+    mobile: mobileReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
