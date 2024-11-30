@@ -13,6 +13,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.4.0",
     "less": "^4.2.0",
     "less-watch-compiler": "^1.16.3",
     "mongodb": "^6.10.0",
