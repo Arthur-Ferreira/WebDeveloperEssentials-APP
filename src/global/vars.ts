@@ -1,3 +1,5 @@
+const font = "Montserrat, sans-serif"
+
 const breakpoints = {
   tablet: '48rem',
   desktop: '64rem',
@@ -41,4 +43,4 @@ const spacing = {
   borderRadiusMedium: '6px',
 }
 
-export { breakpoints, colors, spacing }
+export { breakpoints, colors, spacing, font }

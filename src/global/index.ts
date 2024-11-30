@@ -1,19 +1,18 @@
 import { createGlobalStyle } from "styled-components";
-import { colors } from "../global/vars"
+import { colors, font } from "../global/vars"
 
 
 export const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
     list-style: none;
-
   }
 
   body {
     background-color: ${colors.gray500};
     color: ${colors.gray100};
     margin: 0;
-    font-family: 'Montserrat', 'sans-serif';
+    font-family: ${font};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
