@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import Anchor from "../../atoms/Anchor";
 // import Button from "../../atoms/Button";
 import { H3 } from "../../atoms/Typography";
@@ -7,7 +8,7 @@ type IProduct = {
   product: {
     title: string,
     imageUrl: string,
-    id: string
+    _id: ObjectId | { $oid: string }
   }
 }
 
@@ -23,7 +24,7 @@ const ProductItem: React.FC<IProduct> = ({ product }) => {
           {/* <Anchor to={`/admin/products/${product.id}`} $border>View & Edit</Anchor>
           <Button data-productid={product.id} data-csrf="<%= locals.csrfToken %>">Delete</Button> */}
           {/* id } else { %> */}
-          <Anchor to={`/products/${product.id}`} $border>View Details</Anchor>
+          <Anchor to={`/products/${product._id}`} $border>View Details</Anchor>
           {/* <% } %> */}
         </ProductItemActions>
       </ProductItemContent>

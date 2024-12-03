@@ -10,6 +10,7 @@ import AllOrders from "./components/pages/Orders";
 import AdminOrders from "./components/pages/admin/orders/AdminOrders";
 import AdminProducts from "./components/pages/admin/products/AdminProducts";
 import Cart from "./components/pages/Cart";
+import { allProductsLoader } from "./utils/loaders";
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <AllProducts />,
+        loader: allProductsLoader,
       },
       {
         path: "products",
