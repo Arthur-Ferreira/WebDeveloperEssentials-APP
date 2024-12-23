@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 import ProductItem from "../../molecules/ProductItem";
 
 import { H1 } from "../../atoms/Typography";
-import { parseMixedString } from "../../../utils/parserMixers";
 import { ObjectId } from "mongodb";
 
 type Products = {
@@ -23,7 +22,7 @@ export default function AllProducts() {
         <H1>All Products</H1>
         <List>
           {products.map(product => (
-            <li key={parseMixedString(product.id)}>
+            <li key={`${product.id}`}>
               <ProductItem product={product} />
             </li>
           ))}
