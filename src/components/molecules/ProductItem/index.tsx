@@ -1,19 +1,18 @@
 import { ObjectId } from "mongodb";
 import Anchor from "../../atoms/Anchor";
-// import Button from "../../atoms/Button";
 import { H3 } from "../../atoms/Typography";
 import { SProductItem, ProductItemContent, ProductItemActions } from "./styles";
 
-type IProduct = {
-  product: {
-    title: string,
+
+type TProduct = {
+  product: { 
+    id: ObjectId | { $oid: string },
     imagePath: string,
-    id: ObjectId | { $oid: string }
+    title: string
   }
 }
 
-
-const ProductItem: React.FC<IProduct> = ({ product }) => {
+const ProductItem = ({ product }: TProduct): JSX.Element => {
   return (
     <SProductItem>
       <img src={product.imagePath} alt={product.title} />
