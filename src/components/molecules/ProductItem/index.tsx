@@ -7,7 +7,7 @@ import { SProductItem, ProductItemContent, ProductItemActions } from "./styles";
 type IProduct = {
   product: {
     title: string,
-    imageUrl: string,
+    imagePath: string,
     _id: ObjectId | { $oid: string }
   }
 }
@@ -16,7 +16,7 @@ type IProduct = {
 const ProductItem: React.FC<IProduct> = ({ product }) => {
   return (
     <SProductItem>
-      <img src={product.imageUrl} alt={product.title} />
+      <img src={product.imagePath} alt={product.title} />
       <ProductItemContent>
         <H3>{product.title}</H3>
         <ProductItemActions>
