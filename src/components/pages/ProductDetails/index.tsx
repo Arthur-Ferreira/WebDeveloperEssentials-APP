@@ -18,7 +18,7 @@ const ProdcutDetails: React.FC = () => {
   return (
     <main>
       <ProductDetailsHeader>
-        <ProductDetailsImage src={product.imageUrl} alt={`${product.title}`} />
+        <ProductDetailsImage src={product.imagePath} alt={`${product.title}`} />
         <ProductDetailsInfo>
           <H2>
             {product.title}
