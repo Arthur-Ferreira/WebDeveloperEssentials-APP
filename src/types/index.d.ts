@@ -72,3 +72,17 @@ declare global {
   }
 
 }
+
+
+// Export types
+
+export type TProduct = {
+  title: string;
+  summary: string;
+  price: number;
+  description: string;
+  image: string;
+  imagePath: string;
+  imageUrl: string;
+  id: ObjectId | { $oid: string }
+}

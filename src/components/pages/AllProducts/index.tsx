@@ -3,18 +3,19 @@ import { useLoaderData } from "react-router-dom";
 import ProductItem from "../../molecules/ProductItem";
 
 import { H1 } from "../../atoms/Typography";
-import { ObjectId } from "mongodb";
+import { TProduct } from "../../../types";
 
-type Products = {
-  products: {
-    id: ObjectId | { $oid: string };
-    imagePath: string;
-    title: string;
-  }[]
-}
-export default function AllProducts() {  
-  const data = useLoaderData() as Products
-  const products = data.products
+export default function AllProducts() {
+  const data = useLoaderData() as TProduct[]
+  const products = data
+
+  if (!products) {
+    return (
+      <main>
+        <H1>No Products Found</H1>
+      </main>
+    )
+  }
 
   return (
     <>

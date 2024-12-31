@@ -2,15 +2,19 @@ import { useLoaderData } from "react-router-dom";
 import Button from "../../atoms/Button";
 import { H2 } from "../../atoms/Typography";
 import { ProductDetailsDescription, ProductDetailsHeader, ProductDetailsImage, ProductDetailsInfo } from "./styles";
-
-type TProduct = {
-  product: IProduct  
-}
+import { TProduct } from "../../../types";
 
 const ProdcutDetails: React.FC = () => {
-  const data = useLoaderData() as TProduct
-  const product = data.product
+  const product = useLoaderData() as TProduct
   
+  if(!product) {
+    return (
+      <main>
+        <H2>No Product Found</H2>
+      </main>
+    )
+  }
+
   return (
     <main>
       <ProductDetailsHeader>
