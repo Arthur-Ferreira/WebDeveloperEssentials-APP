@@ -7,7 +7,7 @@ import { SProductItem, ProductItemContent, ProductItemActions } from "./styles";
 type TProductItem = {
   product: { 
     id: ObjectId | { $oid: string },
-    imageUrl: string,
+    imagePath: string,
     title: string
   }
 }
@@ -15,7 +15,7 @@ type TProductItem = {
 const ProductItem = ({ product }: TProductItem): JSX.Element => {
   return (
     <SProductItem>
-      <img src={product.imageUrl} alt={product.title} />
+      <img src={product.imagePath} alt={product.title} />
       <ProductItemContent>
         <H3>{product.title}</H3>
         <ProductItemActions>
